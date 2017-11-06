@@ -12,12 +12,13 @@ INC= include
 ###
 
 #NOMBRE EJECUTABLE
-TARGET= practica3
+TARGET= prueba
 
 # OPCIONES COMPILACION
 CC = gcc
 CFLAGS= -g -I$(INC)
 Cxx= g++
+#podemos aniadir $(FLAGSERRORES) a CXXFLAGS o no
 FLAGSERRORES= -Wall -Wextra -pedantic
 CXXFLAGS=  -std=c++11 -O2 -Wall 
 LIBS= -lGL -lGLU -lglut
@@ -28,11 +29,15 @@ INCLUDES= -I$(INC)
 EXE= $(BIN)/$(TARGET)
 ###
 
-#FICHEROS OBJETO DEPENDIENTES DE UN .h
+
+###SECCION OBJETOS###
+#FICHEROS OBJETO
 OBJECTS= $(OBJ)/practica3.o $(OBJ)/escena.o $(OBJ)/ejes.o $(OBJ)/punto3d.o \
  $(OBJ)/objeto3d.o $(OBJ)/cubo.o $(OBJ)/tetraedro.o $(OBJ)/cara.o $(OBJ)/piramide.o \
 $(OBJ)/file_ply_stl.o $(OBJ)/model_ply.o $(OBJ)/model_rev.o $(OBJ)/model_bar.o \
 $(OBJ)/model_jer.o
+####FIN SECCION OBJETOS####
+
 
 
 #DEPENDENCIAS AUTOMATICAS A PARTIR DE LOS .o
